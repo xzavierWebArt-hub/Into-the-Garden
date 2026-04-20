@@ -1,0 +1,619 @@
+body {
+background-color: rgb(86, 124, 96);
+background-size: 100% 100%;
+background-size: contain;
+Max-width: 1800px;
+
+
+}
+
+.bg {
+border-radius: 10px ;
+  position: relative;
+ margin-top: 15px;
+ margin-left: 10px;
+  width: 1475px;
+  height: 1200px;
+  font-size: 24px;
+ justify-content: flex-start; /* don’t spread out */
+  align-content: flex-start; 
+  margin-bottom: 30px;
+    
+background-image: url("tree\ bg\ level\ 1\ after\ edit-01.png");
+background-size: 100% 100%;
+  background-size: 100% 100%;  
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hive1 {
+    position: absolute;
+  top: 257px;
+  left: 200px;
+  position: relative;
+  cursor: pointer; 
+   pointer-events: 80px; 
+   display: inline-block; 
+}
+@keyframes shake {
+ 0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-2deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(2deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(2deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+95% { transform: translate(1px, -2px) rotate(-1deg); }
+ }
+
+
+
+.hive1 {
+  animation: shake 2s infinite;
+  animation-delay: 0.2s;
+    z-index: 1;
+
+}
+
+
+.bee1 {
+  position: absolute;
+  top: -320px;
+  left: -200px;
+   transform:translate(0) scale(0); 
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+ cursor: pointer; 
+   z-index: 2;
+
+}
+
+
+.bee1.show1 {
+  pointer-events: auto;
+
+  animation:
+    flyOut 0.3s ease-out forwards,
+    hover1 .7s ease-in-out 0.3s infinite alternate;
+}
+
+
+@keyframes flyOut {
+  0% {
+    transform: translate(0,0) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(200px, -100px) scale(0.25);
+    opacity: 1;
+  }
+}
+
+@keyframes hover1 {
+  from {
+    transform: translate(200px, -100px) scale(0.25);
+  }
+  to {
+    transform: translate(260px, -100px) scale(0.25) rotate(10deg);
+  }
+}
+
+.TP1 {
+  position: absolute;
+  top: -320px;
+  left: -200px;
+   transform:translate(0) scale(0); 
+    opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+ cursor: pointer; 
+   pointer-events: none; 
+}
+
+.TP1.show2 {
+  position: absolute;
+  top: -320px;
+  left: -200px;
+    position: absolute;
+  transform: translate(150px, 0) scale(0.4);
+  opacity: 1;
+ cursor: pointer; 
+   pointer-events: auto; 
+    z-index: 3;
+}
+
+.TP2 {
+  position: absolute;
+  top: -320px;
+  left: -200px;
+   transform:translate(150px,0) scale(0); 
+    opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+ cursor: pointer; 
+ pointer-events: none; 
+
+}
+
+.TP2.show3 {
+  position: absolute;
+  top: -320px;
+  left: -200px;
+  transform: translate(150px, 0) scale(0.4);
+  opacity: 1;
+ cursor: pointer; 
+ z-index: 4;
+ pointer-events: auto; 
+}
+
+.download1 {
+  position: absolute;
+  padding: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 255, 255, 0);
+  top: 390px;
+  left: 760px;
+ cursor: pointer; 
+ z-index: 4;
+ 
+   transform: scale(0); 
+    opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+ cursor: pointer; 
+}
+
+.download1.show4 {
+  position: absolute;
+  padding: 20px;
+  width: 80px;
+  height: 50px;
+  background-color: rgba(0, 255, 255, 0);
+  top: 390px;
+  left: 740px;
+ cursor: pointer; 
+ z-index: 4;
+   transform: scale(1); 
+    opacity: 1;
+ cursor: pointer; 
+ color: rgba(240, 248, 255, 0);
+}
+
+.text1 {
+         text-shadow:   -2px -2px 0 rgb(255, 255, 255),
+         2px -2px 0 rgb(255, 255, 255),
+        -2px  2px 0 rgb(255, 255, 255),
+         2px  2px 0 rgb(255, 255, 255);;
+         word-spacing: 5px;
+
+  font-family: "louvette-pixel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 200px;
+  left: 420px;
+  font-size: 26px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+  /* FIX: fixed width container */
+  width: 36ch;
+    opacity: 0;
+     pointer-events: none; 
+  }
+
+.text1.showtext1 {
+  opacity: 1;
+  z-index: 3;
+  animation: 
+    typing 2s steps(34, end),
+    blink-caret 0.75s step-end infinite;
+     pointer-events: auto; 
+}
+      @keyframes typing {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(201, 255, 250); }
+  
+}
+
+
+
+.text2 {
+         text-shadow:   -2px -2px 0 rgb(255, 255, 255),
+         2px -2px 0 rgb(255, 255, 255),
+        -2px  2px 0 rgb(255, 255, 255),
+         2px  2px 0 rgb(255, 255, 255);;
+         word-spacing: 5px;
+
+  font-family: "louvette-pixel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 190px;
+  left: 425px;
+  font-size: 26px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+    width: 35ch;
+    opacity: 0;
+     pointer-events: none; 
+}
+
+.text2.showtext2 {
+  opacity: 1;
+z-index: 4;
+  animation: 
+    typing 2s steps(34, end),
+    blink-caret 0.75s step-end infinite;
+         pointer-events: auto; 
+}
+      @keyframes typing {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(201, 255, 250); }
+}
+
+.hive2 {
+  z-index: 1;
+  position: absolute;
+  top: 320px;
+  left: 800px;
+  transform: scale(0.6);
+    animation: hive2Shake 4s infinite;
+  animation-delay: 1s;
+   cursor: pointer; 
+}
+
+
+
+@keyframes hive2Shake {
+  0%   { transform: translateX(0) scale(0.6); }
+
+  5%   { transform: translateX(-10px) scale(0.6); }
+  10%  { transform: translateX(10px) scale(0.6); }
+  15%  { transform: translateX(-8px) scale(0.6); }
+  20%  { transform: translateX(8px) scale(0.6); }
+
+  100% { transform: translateX(8px) scale(0.6); }
+}
+
+.bee2 {
+
+  position: absolute;
+  top: -150px;
+  left: 470px;
+transform: scale(0.2);
+   transform:translate(0) scale(0); 
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+ cursor: pointer;
+   pointer-events: none;  
+}
+
+.bee2.show5 {
+  position: absolute;
+  top: -150px;
+  left: 470px;
+   transform:translate(-200px,-100px ) scale(0.27); 
+  opacity: 1;
+ cursor: pointer; 
+   pointer-events: auto;
+      z-index: 2;
+   animation: flyOut2 0.3s ease-out forwards;
+   animation: hover2 1s ease-in-out 0.7s infinite alternate;
+}
+
+@keyframes flyOut2 {
+  0% {
+    transform: translate(0,0) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-200px, -100px) scale(0.27);
+    opacity: 1;
+  }
+}
+
+@keyframes hover2 {
+  from {
+    transform: translate(-200px, -100px) scale(0.27);
+  }
+  to {
+    transform: translate(-200px, 10px) scale(0.27) rotate(-5deg);
+  }
+}
+.GT1 {
+  position: absolute;
+  top: -150px;
+  left: 170px;
+opacity: 0;
+transform:translate(0px,0 ) scale(0); 
+  transition: transform 0.4s ease, opacity 0.4s ease;
+ cursor: pointer; 
+
+}
+
+.GT1.show6 {
+  position: absolute;
+  top: -150px;
+  left: 170px;
+transform: scale(0.4);
+transform:translate(-50px,0 ) scale(0.4); 
+opacity: 1;
+z-index: 2;
+}
+
+.GT2 {
+  z-index: 3;
+  position: absolute;
+  top: -150px;
+  left: 170px;
+opacity: 0;
+transform:translate(-50px,0 ) scale(0); 
+  transition: transform 0.4s ease, opacity 0.4s ease;
+ cursor: pointer; 
+
+}
+
+.GT2.show7 {
+  position: absolute;
+  top: -150px;
+  left: 170px;
+transform: scale(0.4);
+transform:translate(-50px,0 ) scale(0.4); 
+opacity: 1;
+}
+
+
+.download2 {
+  z-index: 3;
+  position: absolute;
+  padding: 20px;
+  width: 70px;
+  height: 50px;
+  background-color: rgba(0, 255, 255, 0);
+  top: 570px;
+  left: 940px;
+ cursor: pointer; 
+ z-index: 2;
+ transform: scale(0); 
+    opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+ cursor: pointer; 
+}
+.download2.show8 {
+  position: absolute;
+  padding: 20px;
+  width: 70px;
+  height: 50px;
+  background-color: rgba(0, 255, 255, 0);
+  top: 570px;
+  left: 940px;
+ cursor: pointer; 
+ z-index: 3;
+ transform: scale(1); 
+    opacity: 1;
+ cursor: pointer; 
+  color: rgba(240, 248, 255, 0);
+
+}
+
+
+.text3 {
+ 
+  font-family: "louvette-pixel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 160px;
+  left: 415px;
+  font-size: 28px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+    width: 34ch;
+    opacity: 1;
+     pointer-events: none; 
+}
+
+.text3 {
+   text-shadow:   -2px -2px 0 rgb(255, 255, 255),
+   2px -2px 0 rgb(255, 255, 255),
+         -2px  2px 0 rgb(255, 255, 255),
+2px  2px 0 rgb(255, 255, 255);;
+ word-spacing: 5px;
+;
+  font-family: "louvette-pixel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 370px;
+  left: 600px;
+  font-size: 26px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+    width: 35ch;
+    opacity: 0;
+  
+     pointer-events: none; 
+}
+.text3.showtext3 {
+  opacity: 1;
+   z-index: 2;
+  animation: 
+
+    typing 2s steps(34, end),
+    blink-caret 0.75s step-end infinite;
+         pointer-events: auto; 
+}
+      @keyframes typing {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(201, 255, 250); }
+}
+
+
+
+.text4 {
+         text-shadow:   -2px -2px 0 rgb(255, 255, 255),
+         2px -2px 0 rgb(255, 255, 255),
+        -2px  2px 0 rgb(255, 255, 255),
+         2px  2px 0 rgb(255, 255, 255);;
+         word-spacing: 5px;
+
+  font-family: "louvette-pixel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 370px;
+  left: 590px;
+  font-size: 26px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+    width: 36ch;
+    opacity: 0;
+     pointer-events: none; 
+}
+.text4.showtext4 {
+  opacity: 1;
+z-index: 3;
+  animation: 
+    typing 2s steps(34, end),
+    blink-caret 0.75s step-end infinite;
+         pointer-events: auto; 
+}
+      @keyframes typing {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(201, 255, 250); }
+}
+
+
+.nextpage{
+  cursor: pointer;
+  position: absolute;
+  top: 900px;
+  left: 700px;
+transform: scale(0.4);
+  animation: nextP 1.2s infinite;
+
+}
+
+a {
+display: block; /* Ensures the link covers the entire div */
+text-decoration: none; /* Removes underline */
+}
+
+@keyframes nextP {
+  0%   { transform: translate(-50%, 0)  scale(0.4); }
+  50%  { transform: translate(-50%, -15px)  scale(0.4); }
+  100% { transform: translate(-50%, 0) scale(0.4); }
+
+}
+
+
+.bub{
+  position: absolute;
+  top: -200px;
+  left: -400px;
+transform: scale(0.1);
+animation: bubro 5s linear infinite;
+
+}
+@keyframes bubro {
+  0%   { transform: translate(0, 0)scale(0.15); }
+  25%  { transform: translate(220px, )scale(0.1); }
+  50%  { transform: translate(-100px, 100px)scale(0.15); }
+  75%  { transform: translate(-60px, 100px)scale(0.1); }
+        100% { transform: translate(0, 0)scale(0.15); } }
+
+        .bubb{
+  position: absolute;
+  top: 600px;
+  left: 500px;
+transform: scale(0.1);
+animation: bubrob 5s linear infinite;
+
+}
+@keyframes bubrob {
+  0%   { transform: translate(0, 0)scale(0.15); }
+  25%  { transform: translate(180px, )scale(0.1); }
+  50%  { transform: translate(160px, 100px)scale(0.15); }
+  75%  { transform: translate(-160px, 200px)scale(0.1); }
+        100% { transform: translate(0, 0)scale(0.15); } }
+
+        .confetti{
+  position: absolute;
+  z-index: 0;
+  top: 130px;
+  left: 100px;
+transform: scale(1) rotate(-20deg);
+
+
+}
+
+        .spotlight{
+  position: absolute;
+  z-index: 0;
+  top: 130px;
+  left: 100px;
+transform: scale(1) rotate(-20deg);
+
+
+}
+
+ 
+
+.leaffall{
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+transform: scale(1) rotate(0);
+        }
+
+.leaffall2{
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 1000px;
+transform: scale(1) rotate(0);
+        }
+
+
+        .Consign {
+  position: absolute;
+  z-index: 0;
+  top: -450px;
+  left: 420px;
+transform: scale(.12) rotate(-30deg);
+opacity: .8;
+cursor: pointer; 
+display: block;
+        }
