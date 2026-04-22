@@ -556,6 +556,7 @@ z-index: 3;
   left: 750px;
 transform: scale(0.4);
   animation: nextP 1.2s infinite;
+    display: inline-block;
 }
 
 
