@@ -1123,7 +1123,7 @@ align-items: center;
 .Bmbox4 span{
 text-align: center;
 display: inline-block;
-transform: translate(165px,-4px);
+transform: translate(135px,-4px);
 filter: drop-shadow(0px 0px 15px rgb(67, 252, 0));
 }
 
