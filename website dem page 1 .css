@@ -1,7 +1,9 @@
 body {
 position:relative;
 background-image: url("gras\ bg\ page1-01.png");
-background-size: cover;     
+background-size: cover;    
+width: 100vw; 
+height: 100vh;
 
 
 
