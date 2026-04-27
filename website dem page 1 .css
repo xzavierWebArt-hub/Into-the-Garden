@@ -9,11 +9,6 @@ height: 100vh;
 
 }
 
-body {
-  transform: scale(calc(100vw / 1500));
-  transform-origin: top left;
-}
-
 .topline {
 border-radius: 15px ;
   display: flex;
@@ -52,10 +47,9 @@ position: absolute ;
 width: 600px;
 height: 80px;
 left: 450px;
-top: 40px;
 padding: 20px;
 box-sizing: 4px;
-
+top: 40px;
  filter: drop-shadow(0px 10px 10px #027600);
 }
 
@@ -365,14 +359,13 @@ position: absolute ;
 
 .maincontainer  {
   margin: 10px;
-   width: 100%;
+  width: 1475px;
   height: 1420px;
   font-size: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px 10px;
-  margin: auto;
- 
+ width: 100%;
 
  
 }
@@ -1456,4 +1449,3 @@ transform: translate(1083px, -145px)scale(0.4) rotate(90deg);
 .bottomrightcollum, .Bmiddlecollum, .Bleftcollum {
   margin-top: -180px;
 }
-
